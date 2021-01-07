@@ -1,0 +1,13 @@
+<!--components/list/index.wxml-->
+<view class="list-content">
+    <view class="title">{{title}}</view>
+    <view 
+    class="flex-between list-item" 
+    wx:for="{{list}}" 
+    wx:key="item" 
+    data-type="{{item.type}}"
+    bindtap="clickItem">
+        <view>{{item.title}}</view>
+        <view class="right-icon"></view>
+    </view>
+</view>

@@ -1,0 +1,164 @@
+<!--pages/index/detail.wxml-->
+<wux-dialog id="wux-dialog" />
+<action-dialog id="action-dialog" />
+<notify-dialog id="notify-dialog"/>
+<wux-popup id="wux-popup" />
+<wux-overlay id="wux-overlay" />
+<view>
+    <block wx:if="{{type == 'button'}}">
+        <view class="title">按钮尺寸</view>
+        <my-button size="l" title="大号按钮"/>
+        <view class="flex-row m-10">
+            <my-button size="m" title="普通按钮"/>
+            <my-button size="s" title="小型"/>
+        </view>
+        <view class="title">按钮类型</view>
+        <view>
+            <view class="flex-row wrap m-10">
+                <my-button type="orange" title="orange"/>
+                <my-button type="purple" title="purple"/>
+                <my-button disabled style="margin: 0!important;" title="禁用按钮"/>
+            </view>
+            <my-button 
+            size="l" 
+            style="background: linear-gradient(90deg, #FF9211 0%, #FF0 100%);" 
+            title="自定义颜色"/>
+        </view>
+        <view class="title">监听点击事件</view>
+        <my-button size="l" title="大号按钮" bind:click="handleBtnClick"/>
+    </block>
+    <block wx:if="{{type == 'style'}}">
+        <view class="title">border方式：（不支持圆角）</view>
+        <view class="flex-row">
+            <view class="border-trangle top"></view>
+            <view class="border-trangle right"></view>
+            <view class="border-trangle bottom"></view>
+            <view class="border-trangle left"></view>
+        </view>
+        <view class="title">正方形+transform方式：（支持圆角）</view>
+        <view class="flex-row">
+            <view class="square-trangle"></view>
+        </view>
+        <view class="title">transform skew方式：（支持圆角）</view>
+        <view class="square-box">
+            <view class="skew-trangle">
+                <view class="skew"></view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{type == 'numberKey'}}">
+        <view class="title">自定义数字键盘</view>
+        <my-number-key-border status="{{showKeyborder}}" bind:change="changeNumberKey"></my-number-key-border>
+    </block>
+    <block wx:if="{{type == 'password'}}">
+        <view class="title">密码输入框</view>
+        <my-password-input 
+        length="6" 
+        value="{{passWord}}" 
+        isPassword="{{true}}"
+        bind:focus="handlePasswordFocus"></my-password-input>
+    </block>
+    <block wx:if="{{type == 'action'}}">
+        <view class="title">动作面板</view>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showActionDialog" title="基础用法"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showActionCancleDialog" title="展示取消按钮"/>
+    </block>
+    <block wx:if="{{type == 'dialog'}}">
+        <view class="title">弹出框</view>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showDialog" title="基础用法"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showBtnDialog" title="按钮提示弹窗"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showConfirmDialog" title="确认弹窗"/>
+    </block>
+    <block wx:if="{{type == 'notify'}}">
+        <view class="title">消息通知</view>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showNotifyDialog" title="基础用法"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showNotifySussessDialog" title="成功通知"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showNotifyDangerDialog" title="危险通知"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showNotifyCustomizeDialog" title="自定义时长"/>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showNotifyThemeDialog" title="自定义主题色"/>
+    </block>
+    <block wx:if="{{type == 'overlay'}}">
+        <view class="title">遮罩层</view>
+        <my-button size="l" style="margin-bottom: 10px;" bind:click="showOverlay" title="展示遮罩层"/>
+    </block>
+    
+    <!-- 环形进度条 -->
+    <block wx:if="{{type == 'circle'}}">
+        <view class="title">基础用法</view>
+        <my-progress />
+    </block>
+    <!-- 折叠面板 -->
+    <block wx:if="{{type == 'collapse'}}">
+        <view class="title">基础用法</view>
+        <my-collapse list="{{collapseList}}" bind:click="changeCollapse" />
+        <view class="title">手风琴</view>
+        <my-collapse list="{{collapseList}}" accordion />
+    </block>
+    <!-- 倒计时 -->
+    <block wx:if="{{type == 'countDown'}}">
+        <view class="title">基础用法</view>
+        <view class="my-countdown">
+            <my-countdown time="{{time}}" format="HH:mm:ss" />
+        </view>
+        <view class="title">文字格式</view>
+        <view class="my-countdown">
+            <my-countdown time="{{time}}" format="DD天HH小时mm分钟ss秒" />
+        </view>
+    </block>
+    <!-- 分割线 -->
+    <block wx:if="{{type == 'divider'}}">
+        <view class="title">基础用法</view>
+        <my-divider />
+        <view class="title">展示文本</view>
+        <my-divider title="文本" />
+        <view class="title">虚线</view>
+        <my-divider title="文本" dashed />
+    </block>
+    <!-- 空状态 -->
+    <block wx:if="{{type == 'empty'}}">
+        <view class="title">基础用法</view>
+        <my-empty description="描述文字"/>
+        <view class="title">自定义图片</view>
+        <my-empty description="描述文字" image="/src/images/custom-empty.png" />
+    </block>
+    <!-- 图片预览 -->
+    <block wx:if="{{type == 'imagePreview'}}">
+        <view class="title">基础用法</view>
+        <my-button size="l" bind:click="showImagePreview" title="基础用法"/>
+    </block>
+    <!-- 轮播 -->
+    <block wx:if="{{type == 'swiper'}}">
+        <view class="title">基础用法</view>
+        <my-swiper list="{{banners}}" id="swiper"/>
+        <view class="title">动画效果</view>
+        <my-swiper list="{{banners}}" animation id="swiper"/>
+    </block>
+    <!-- 宫格 -->
+    <block wx:if="{{type == 'grid'}}">
+        <view class="title">基础用法</view>
+        <my-grid list="{{gridList}}" />
+        <view class="title">自定义列数</view>
+        <my-grid list="{{gridList}}" column-num="5" />
+    </block>
+    <!-- Tab标签页 -->
+    <block wx:if="{{type == 'tab'}}">
+        <view class="title">基础用法</view>
+        <my-tab type="{{tabbarType}}" list="{{tabList}}" active="{{tabIndex}}" data-type="tab1" bind:change="handleTabChange"/>
+        <view class="m-t-50">{{tabList[tabIndex].title}}</view>
+        <view class="title">自定义图标</view>
+        <my-tab type="{{tabbarType}}" list="{{tabList2}}" active="{{tabIndex2}}" data-type="tab2" bind:change="handleTabChange"/>
+        <view class="m-t-50">{{tabList2[tabIndex2].title}}</view>
+    </block>
+    <!-- 侧边导航 -->
+    <block wx:if="{{type == 'sidebar'}}">
+        <view class="title">基础用法</view>
+        <my-sidebar list="{{sideList}}" />
+        <view class="title">微标提示</view>
+        <my-sidebar list="{{sideList2}}"/>
+        <view class="title">禁用选项</view>
+        <my-sidebar list="{{sideList3}}"/>
+        <view class="title">监听切换事件</view>
+        <my-sidebar list="{{sideList3}}" bind:click="handleSidebar"/>
+    </block>
+    
+</view>

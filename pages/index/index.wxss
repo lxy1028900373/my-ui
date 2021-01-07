@@ -1,0 +1,6 @@
+page{
+  width: 100%;
+  background-color: #fff;
+  padding: 40rpx;
+  box-sizing: border-box;
+}

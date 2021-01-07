@@ -1,0 +1,24 @@
+/* components/list/index.wxss */
+@import '../../src/css/global.wxss';
+
+.list-content{
+    width: 100%;
+    box-sizing: border-box;
+}
+.title{
+    margin: 48rpx 0 16rpx 32rpx;
+    color: rgba(69, 90, 100, 0.6);
+    font-size: 28rpx;
+}
+.list-item{
+    width: 100%;
+    height: 80rpx;
+    background: #f7f8fa;
+    border-radius: 80rpx;
+    font-size: 28rpx;
+    color: #323233;
+    font-weight: bold;
+    margin-bottom: 24rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}

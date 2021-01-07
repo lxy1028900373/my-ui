@@ -1,0 +1,17 @@
+<!--components/list/collapse.wxml-->
+<block>
+    <view class="collapse-list {{accordion && activeIndex == index ? 'collapse-in' : ''}} {{!accordion && item.active ? 'collapse-in' : ''}}" 
+    wx:for="{{list}}" 
+    wx:key="item">
+        <view class="flex-between cell-box" data-index="{{index}}" bindtap="changeCollapse">
+            <view class="cell-title">{{item.title}}</view>
+            <view class="right-icon"></view>
+        </view>
+        <view class="collapse-box">
+            <view class="collapse-item-content">
+                {{item.content}}
+            </view>
+        </view>
+    </view>
+</block>
+

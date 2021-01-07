@@ -1,0 +1,26 @@
+<!--components/swiper/banner.wxml-->
+<!-- 首页-顶部banner -->
+<view class="slide-box" wx:if="{{list.length > 0}}">
+    <swiper
+        autoplay="{{loop}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        class="slide"
+        circular="true"
+        previous-margin="{{bannerMargin}}"
+        next-margin="{{bannerMargin}}"
+        bindchange="intervalChange">
+        <block wx:for="{{list}}" wx:for-index="index" wx:key="item">
+            <swiper-item bindtap="handleBannerTap" data-item="{{item}}">
+                <view class="slide-image-warpper"  style="{{index===0?((bannerSlideIndex===list.length-1)?'justify-content: flex-end;padding:0 '+bannerMargin+' 0 0':(bannerSlideIndex===1?'justify-content: flex-start;padding:0 '+bannerMargin+' 0 0 ':'justify-content: center;padding:0 0 0 0')):(index===list.length-1?(bannerSlideIndex===0?'justify-content: flex-start;padding:0 '+bannerMargin+' 0 0 ':(bannerSlideIndex===list.length-2?'justify-content: flex-end;padding:0 '+bannerMargin+' 0 0':'justify-content: center;padding: 0 0 0 0')):(bannerSlideIndex===index-1?'justify-content: flex-end;padding: 0 '+bannerMargin+' 0 0':(bannerSlideIndex===index+1?'justify-content: flex-start;padding: 0 '+bannerMargin+' 0 0 ':'justify-content: center;padding: 0 0 0 0')))}}">
+                    <image src="{{item.image}}" class="slide-image" style="{{animation&&index===bannerSlideIndex?'transform: scale(1,1)':'transform: scale(0.91527,0.91524)'}}" />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="slide-dots" wx:if="{{indicators}}">
+        <block wx:for="{{list}}" wx:for-index="idx" wx:key="item">
+            <view class="slide-dot {{bannerSlideIndex == idx ?'active':''}}"></view>
+        </block>
+    </view>
+</view>

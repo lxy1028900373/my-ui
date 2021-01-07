@@ -1,0 +1,17 @@
+<!--components/list/numberKeyBorder.wxml-->
+<view class="dialog-action">
+  <view class="mask {{is_show ? 'dialog-in' : ''}}" bindtap="hide"></view>
+  <view class="dialog-content {{is_show ? 'dialog-bottom' : ''}}">
+    <view class="number-keyborder">
+      <view class="number-keyborder-item" wx:for="{{keyList}}" wx:key="item" data-item="{{item}}" bindtap="onChange">
+        <view class="key">
+          <block wx:if="{{item == 'keyborder'}}">收起</block>
+          <block wx:elif="{{item == 'delete'}}">删除</block>
+          <block wx:else>{{item}}</block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

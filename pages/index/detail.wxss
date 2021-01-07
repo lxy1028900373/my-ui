@@ -1,0 +1,66 @@
+/* pages/index/detail.wxss */
+page{
+    width: 100%;
+    padding: 40rpx;
+    box-sizing: border-box;
+}
+.title{
+    padding: 60rpx 32rpx 32rpx 0;
+    color: rgba(69, 90, 100, 0.6);
+    font-weight: normal;
+    font-size: 28rpx;
+    line-height: 32rpx;
+}
+.m-10{
+    margin: 20rpx 0;
+}
+/* Style */
+.border-trangle{
+    width: 0;
+    height: 0;
+    border: 20rpx solid;
+    margin-right: 20rpx;
+}
+.top{
+    border-color: transparent transparent #333 transparent;
+}
+.right{
+    border-color: transparent  transparent transparent #333;
+}
+.bottom{
+    border-color: #333 transparent transparent transparent;
+}
+.left{
+    border-color: transparent #333 transparent  transparent;
+}
+.square-trangle{
+    width: 30rpx;
+    height: 30rpx;
+    background-color: #333;
+    transform: rotate(45deg);
+    border-radius: 4px;
+}
+.square-box{
+    width: 80rpx;
+    height: 40rpx;
+    position: relative;
+    background-color: #333;
+    border-radius: 4rpx;
+}
+.skew-trangle{
+    position: absolute;
+    bottom: -4rpx;
+    left: 50%;
+    transform: translateX(-50%) rotate(65deg);
+}
+.skew-trangle .skew{
+    width: 30rpx;
+    height: 30rpx;
+    background-color: #333;
+    transform: skewX(45deg);
+    border-radius: 4px;
+}
+/* tab */
+.m-t-50{
+    margin-top: 100rpx;
+}

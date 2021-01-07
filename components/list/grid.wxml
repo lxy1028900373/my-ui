@@ -1,0 +1,9 @@
+<!--components/list/grid.wxml-->
+<view class="grid">
+  <view class="grid-item" wx:for="{{list}}" wx:key="index" style="flex-basis: calc(100% / {{columnNum ? columnNum : 4}})">
+    <view class="grid-content {{horizontal ? 'horizontal' : ''}}">
+      <image wx:if="{{item.url}}" class="grid-icon" src="{{item.url}}"/>
+      <text wx:if="{{item.title}}" class="grid-title">{{item.title}}</text>
+    </view>
+  </view>
+</view>

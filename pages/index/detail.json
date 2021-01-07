@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "my-button": "../../components/list/button",
+    "wux-dialog": "../../components/dialog/index",
+    "action-dialog": "../../components/dialog/action",
+    "notify-dialog": "../../components/dialog/notify",
+    "my-progress": "../../components/dialog/progress",
+    "my-countdown": "../../components/dialog/countDown",
+    "my-empty": "../../components/dialog/empty",
+    "my-tab": "../../components/list/myTab",
+    "my-grid": "../../components/list/grid",
+    "my-sidebar": "../../components/list/sidebar",
+    "my-number-key-border": "../../components/list/numberKeyBorder",
+    "my-password-input": "../../components/list/passwordInput",
+    "wux-overlay": "../../components/dialog/overlay",
+    "my-collapse": "../../components/list/collapse",
+    "my-divider": "../../components/list/divider",
+    "my-swiper": "../../components/swiper/banner"
+  }
+}

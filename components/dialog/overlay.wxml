@@ -1,0 +1,5 @@
+<!--components/dialog/overlay.wxml-->
+<!-- 遮罩层 -->
+<view class="overlay {{in ? 'block' : ''}} {{fadeType}}" hidden="{{!show}}" bindtap="hide">
+
+</view>

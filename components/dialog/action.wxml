@@ -1,0 +1,16 @@
+<!--components/wux-dialog/action.wxml-->
+<view class="dialog-action">
+    <view class="mask {{in ? 'dialog-in' : ''}}" bindtap="hide"></view>
+    <view class="dialog-content {{in ? 'dialog-bottom' : ''}}">
+        <view class="title" style="{{titleStyle}}" wx:if="{{title}}">{{title}}</view>
+        <view class="action-list" wx:if="{{actions.length > 0}}">
+            <view wx:for="{{actions}}" wx:key="item" class="action-item" bindtap="actionsTapped" data-index="{{index}}">
+                {{item.name}}
+            </view>
+        </view>
+        <!-- 取消 -->
+        <view class="cancle-list" style="{{cancleStyle}}" wx:if="{{cancelAction}}" bindtap="hide">
+            取消
+        </view>
+    </view>
+</view>

@@ -1,0 +1,105 @@
+/* components/wux-dialog/index.wxss */
+@import '../../src/css/global.wxss';
+.dialog-overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.dialog-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 686rpx;
+    padding: 100rpx 80rpx;
+    border-radius: 40rpx;
+    background-color: #fff;
+    z-index: 150;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(0.9);
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+}
+.dialog-in{
+    display: block;
+}
+.title{
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+}
+.content{
+    padding: 20rpx 0;
+    font-size: 32rpx;
+    line-height: 44rpx;
+    color: #575757;
+}
+.btn-confirm-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    border-top: 1px solid #cecece;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-top: 40rpx;
+}
+.btn-confirm-box .btn-item{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36rpx;
+}
+.btn-confirm-box .btn-item:first-child{
+    color: #a4a4a4;
+    border-right: 1px solid #cecece;
+}
+.btn-confirm-box .btn-item:last-child{
+    color: #ff9500;
+    font-weight: bold;
+}
+.btn-default-box .btn-item{
+    width: 100%;
+    height: 100rpx;
+    background: #FFCC2D;
+    border-radius: 80rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20rpx;
+}
+.close-btn{
+    width: 80rpx;
+    height: 80rpx;
+    background-size: 80rpx;
+    background-repeat: no-repeat;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMcSURBVHgB7ZyNceIwEIXfXQV0gDq4K8ElpAPcAXRgdxA6IB1AB56rgOtAXAWkA58X4xniwWCv5JVE9pt5w2TIKJuPtS3hH0BRFEVRFEVRFEVRvhc/EBeLJtn11TRZ9t7/1+Szyd9rPqFchL03sU3qiTk22V3H+FZQhxVNzpgubSj0AZBMgxfGoP0n65nzkiIL+O24MSnwAhi0+6o6UCwS7sYV5LvuXqiGDRKjQHhxyW7SMcpLRmLM8qKXuEb88rpEt080SEdel9+IBFpZWKQlr77WvEAE0Fo2FWn9vCMwBmkJu5cMAamQnrB+KgQiA6NgY0y93+/rqqrqt7c3ZwHr9bo+Ho+X8Whs5jgZArADo1hrbX3LarViyyuK4stYNDZzrArCGDC77x4ciX15HcvlkitR9Iicg9k1/Q7kSByS59CBFNHJdQVmodSFLhIfyXPYB4puxgvwi3wqcbPZhJAnuhlncC/0oUQSBXl5NYSOxiX8FDtaopA8ish+cA9/BT+VKCiPsoMAFeC16IcSBeXVEDqQzHKSaKzEGeVRLASwwCzFP5U4s7zJAn8iMk6nEw6Hw+D79B79TurQpzRLBwwdMG65N8XxGAsBZtkHjpEnILGCAF6nMcDjed6UybaHiAjcwl/BT+d5U1csjtlCgBx+ih09SRaUmEMAAw/FTl1hCEkUO9XpdNEQd3k2s0QLQdj7Qde1LfersBHZQZAMjCIXi4WTPDyReD6fL3+DUxsCnFiavBnfE8hdng1JZAq0CEAJxiddlqWzPAxI3G633LGCXGxEX3+zDiZZltV5nrtsbl8k0vllGpM5hkXAy4BLOAqIICUCkuqVWbfdF5wMaUm7TY5I8Lo+ForIuncstCmHvB9kaiwixCCN/aFFxDffGMQtMWp5HQZxSkxCXodBXBKTktdBB5YPhJf3gUiuxueSI0w3JnmT4RAGst1Ic7yku24Ig/lEUsft8OK3/XcYtJu2j8l3hfYLAfGOi+WxJwbteppO6Py6vg7JoEednJr8QfvokwMCPv4ktufG9DG9n09QFEVRFEVRFEVRFDf+AxlRT+qhNZZXAAAAAElFTkSuQmCC");
+}
+.outside-close{
+    position: absolute;
+    bottom: -90rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.close{
+    position: absolute;
+    top:36rpx;
+    right:36rpx;
+}

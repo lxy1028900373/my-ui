@@ -1,0 +1,9 @@
+<!--components/wux-dialog/progress.wxml-->
+<view class="circle-progress">
+    <view class="content left">
+        <view class="circle left-circle"></view>
+    </view>
+    <view class="content right">
+        <view class="circle right-circle"></view>
+    </view>
+</view>

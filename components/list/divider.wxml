@@ -1,0 +1,4 @@
+<!--components/list/divider.wxml-->
+<view class="divider" style="{{dashed&&'border-style: dashed'}}">
+    <view class="title" wx:if="{{title}}">{{title}}</view>
+</view>

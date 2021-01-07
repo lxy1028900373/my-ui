@@ -1,0 +1,6 @@
+/* components/list/button.wxss */
+@import '../../src/css/_button.wxss';
+
+.m-r-10{
+    margin-right: 20rpx!important;
+}

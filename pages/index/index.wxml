@@ -1,0 +1,7 @@
+<view>
+    <componentList title="基础组件" list="{{basisList}}" bind:click="clickItem"></componentList>
+    <componentList title="表单组件" list="{{formList}}" bind:click="clickItem"></componentList>
+    <componentList title="反馈组件" list="{{feedbackList}}" bind:click="clickItem"></componentList>
+    <componentList title="展示组件" list="{{revealList}}" bind:click="clickItem"></componentList>
+    <componentList title="导航组件" list="{{navigateList}}" bind:click="clickItem"></componentList>
+</view>

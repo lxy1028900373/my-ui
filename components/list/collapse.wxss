@@ -1,0 +1,38 @@
+/* components/list/collapse.wxss */
+@import '../../src/css/global.wxss';
+/* 折叠面板 */
+.collapse-list{
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 100rpx;
+    overflow: hidden;
+}
+.collapse-in{
+    height: auto;
+}
+.collapse-box{
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    /* display: none; */
+}
+.collapse-in .collapse-box{
+    display: block;
+    height: 80rpx;
+    transition: height .3s ease-in-out;
+    will-change: height;
+    transform: rotate(0);
+}
+.collapse-item-content{
+    padding: 24rpx 32rpx;
+    color: #969799;
+    font-size: 14px;
+}
+.collapse-in .right-icon{
+    transform: rotate(90deg);
+    transition: transform .3s,
+}
+.cell-box{
+    padding: 32rpx 0;
+}

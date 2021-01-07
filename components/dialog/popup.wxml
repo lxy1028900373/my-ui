@@ -1,0 +1,7 @@
+<!--components/dialog/popup.wxml-->
+<view class="dialog-action">
+  <view class="mask {{in ? 'dialog-in' : ''}}" bindtap="hide"></view>
+  <view class="dialog-content {{in ? 'dialog-bottom' : ''}}">
+    
+  </view>
+</view>

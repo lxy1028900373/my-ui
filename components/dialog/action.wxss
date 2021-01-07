@@ -1,0 +1,78 @@
+/* components/wux-dialog/action.wxss */
+.dialog-action{
+    
+}
+.mask{
+    width: 100%;
+    height: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity ease-out .3s;
+}
+.dialog-in{
+    height: 100%;
+    opacity: 1
+}
+.dialog-content{
+    width: 100%;
+    max-height: calc(100% - 128rpx);
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: -100vh;
+    background: #FFFFFF;
+    border-radius: 16px 16px 0px 0px;
+    transition: bottom ease-out .3s;
+    z-index: 10;
+    padding: 32rpx 0;
+    box-sizing: border-box;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom); 
+}
+.dialog-bottom{
+    bottom: 0;
+}
+.title{
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    padding: 32rpx;
+    position: relative;
+}
+.title::after{
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ebedf0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.action-list{
+    width: 100%;
+    padding: 0 32rpx;
+    box-sizing: border-box;
+}
+.action-item{
+    width: 100%;
+    padding: 28rpx 0;
+    font-size: 32rpx;
+    color: #333;
+}
+.cancle-list{
+    width: 100%;
+    border-top: 16rpx solid #f7f8fa;
+    padding: 32rpx;
+    font-size: 32rpx;
+    color: #333;
+    background-color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}

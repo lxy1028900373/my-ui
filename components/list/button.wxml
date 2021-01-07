@@ -1,0 +1,7 @@
+<!--components/list/button.wxml-->
+<button 
+bindtap="handleBtnClick"
+style="{{style}} {{'color: '+color}}"
+class="btn m-r-10 {{'btn-'+size}} {{type ? 'btn-type':''}} {{block ? 'block':''}} {{square?'square':''}} {{disabled?'btn-disabled':''}}">
+    {{title}}
+</button>

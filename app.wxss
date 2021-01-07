@@ -1,0 +1,2 @@
+@import './src/css/global.wxss';
+@import './src/css/_button.wxss';

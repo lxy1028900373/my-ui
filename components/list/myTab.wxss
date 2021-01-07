@@ -1,0 +1,90 @@
+/* components/list/myTab.wxss */
+.my-tab{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+.top{
+  top: 0;
+}
+.footer{
+  bottom: 0
+}
+.my-tab-nav{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fff;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+}
+.tab-line{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 80rpx;
+  height: 6rpx;
+  background-color: #FFCC2D;
+  border-radius: 6rpx;
+  transition-duration: 0.3s;
+}
+.tab-item{
+  position: relative;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 8rpx;
+  color: #646566;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.tab-image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+.tab-txt{
+  font-size: 28rpx;
+}
+.active{
+  font-weight: bold;
+  color: #000;
+}
+.tab-scrollable .my-tab-nav{
+  padding: 0 16rpx 0 16rpx;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.tab-scrollable .tab-item{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  /* padding: 0 24rpx; */
+  width: 140rpx;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

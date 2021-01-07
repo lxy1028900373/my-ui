@@ -1,0 +1,5 @@
+<!--components/dialog/empty.wxml-->
+<view class="empty">
+    <image src="{{image ? image : '/src/images/empty.png'}}" class="empty-img"></image>
+    <view class="empty-title" wx:if="{{description}}">{{description}}</view>
+</view>

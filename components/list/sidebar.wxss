@@ -1,0 +1,66 @@
+/* components/list/sidebar.wxss */
+.sidebar-list{
+  margin-left: 16px;
+  width: 160rpx;
+  overflow-y: auto;
+}
+.sidebar-item{
+  position: relative;
+  box-sizing: border-box;
+  padding: 40rpx 24rpx;
+  overflow: hidden;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  background-color: #f7f8fa;
+}
+.active-item{
+  background-color: #fff;
+  font-weight: bold;
+}
+.active-item::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4px;
+  height: 16px;
+  background-color: #ee0a24;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+}
+.disabled{
+  color: #c8c9cc;
+}
+.title{
+  position: relative;
+  display: inline-block;
+  word-break: break-all;
+}
+.badge{
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  min-width: 32rpx;
+  padding: 0 6rpx;
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 1.2;
+  text-align: center;
+  background-color: #ee0a24;
+  border: 1px solid #fff;
+  border-radius: 132rpx;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  -webkit-transform-origin: 100%;
+  transform-origin: 100%;
+  font-weight: 500;
+}
+.dot{
+  width: 16rpx;
+  min-width: 0;
+  height: 16rpx;
+  background-color: #ee0a24;
+  border-radius: 100%;
+}

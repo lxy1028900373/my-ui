@@ -1,0 +1,4 @@
+<!--components/wux-dialog/notify.wxml-->
+<view class="notify {{in ? 'dialog-in' : ''}} {{theme ? 'theme-'+theme : ''}}" style="{{themeStyle}}">
+    <view wx:if="{{title}}" class="title" style="{{titleStyle}}">{{title}}</view>
+</view>

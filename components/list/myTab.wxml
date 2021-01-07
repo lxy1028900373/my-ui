@@ -1,0 +1,10 @@
+<!--components/list/myTab.wxml-->
+<view class="my-tab {{type}} {{list.length > 5 ? 'tab-scrollable':''}}">
+  <view class="my-tab-nav">
+    <view class="tab-item" wx:for="{{list}}" wx:for-index="index" wx:key="item" data-index="{{index}}" bindtap="tabChange">
+      <image class="tab-image" wx:if="{{item.image}}" src="{{item.image}}"></image>
+      <view class="tab-txt {{index == active ? 'active':''}}">{{item.title}}</view>
+    </view>
+    <view class="tab-line" style="transform: translateX({{translateNum}}px) translateX(-50%)"></view>
+  </view>
+</view>

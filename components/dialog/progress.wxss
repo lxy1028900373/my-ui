@@ -1,0 +1,69 @@
+/* components/wux-dialog/progress.wxss */
+.circle-progress {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #888;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.circle {
+    position: absolute;
+    margin: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 20px solid transparent;
+    transform: rotate(135deg);
+}
+
+.left-circle {
+    left: 0;
+    border-top-color: green;
+    border-left-color: green;
+    animation: circle-left 5s linear infinite;
+}
+
+.right-circle {
+    right: 0;
+    border-bottom-color: green;
+    border-right-color: green;
+    animation: circle-right 5s linear infinite;
+}
+
+@keyframes circle-right {
+    0% {
+        transform: rotate(135deg);
+    }
+    50%,
+    100% {
+        transform: rotate(315deg);
+    }
+}
+
+@keyframes circle-left {
+    0%,
+    50% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(315deg);
+    }
+}

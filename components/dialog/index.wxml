@@ -1,0 +1,24 @@
+<!--components/wux-dialog/index.wxml-->
+<view>
+    <view class="dialog-overlay {{in ? 'dialog-in' : ''}} {{fadeType}}"></view>
+    <view class="dialog-content {{in ? 'dialog-in' : ''}}">
+        <view class="title" style="{{titleStyle}}">{{title}}</view>
+        <view class="content" style="{{contentStyle}}">{{content}}</view>
+        <!-- 按钮 -->
+        <view wx:if="{{buttons.length > 0}}" class="{{displayConfirm ? 'btn-confirm-box' : 'btn-default-box'}}">
+            <block wx:for="{{buttons}}" wx:key="item">
+                <view 
+                class="center btn-item" 
+                style="{{item.style}}"
+                bindtap="buttonTapped" 
+                data-index="{{ index }}">{{item.text}}</view>
+            </block>
+        </view>
+        <!-- 关闭 -->
+        <view
+        wx:if="{{closeBtn.status && displayCloseButton}}"
+        class="close-btn {{ closeButtonOutside ? 'outside-close':'close'}}"
+        style="{{ closeBtnStyle?closeBtnStyle:'' }}"
+        bindtap='closeBtnOnTap'></view>
+    </view>
+</view>

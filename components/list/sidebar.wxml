@@ -1,0 +1,12 @@
+<!--components/list/sidebar.wxml-->
+<view class="sidebar-list">
+  <view wx:for="{{list}}" wx:for-index="index" wx:key="item"
+  class="sidebar-item {{activeIndex == index ? 'active-item' : ''}} {{item.disabled ? 'disabled' : ''}}" 
+  data-index="{{index}}"
+  bindtap="{{item.disabled ? null : 'onChange'}}">
+    <view class="title">
+      {{item.title}}
+      <view wx:if="{{item.dot || item.badge}}" class="badge {{item.dot ? 'dot' : ''}}">{{item.badge}}</view>
+    </view>
+  </view>
+</view>

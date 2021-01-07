@@ -1,0 +1,35 @@
+/* components/dialog/popup.wxss */
+.mask{
+  width: 100%;
+  height: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity ease-out .3s;
+}
+.dialog-in{
+  height: 100%;
+  opacity: 1
+}
+.dialog-content{
+  width: 100%;
+  max-height: calc(100% - 128rpx);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+  background: #FFFFFF;
+  border-radius: 16px 16px 0px 0px;
+  transition: bottom ease-out .3s;
+  z-index: 10;
+  padding: 32rpx 0;
+  box-sizing: border-box;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom); 
+}
+.dialog-bottom{
+  bottom: 0;
+}
