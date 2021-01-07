@@ -12,6 +12,6 @@
 
 ##### /git/my-ui/pages/index：项目入口
 
-##### /git/my-ui/pages/detail：项目组件展示页
+##### /git/my-ui/pages/index/detail：项目组件展示页
 
 ### 
